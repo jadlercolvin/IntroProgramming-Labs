@@ -8,6 +8,8 @@ def main():
         if guess == animal:
             zero += 1
             print("Congrats! You've guessed the animal.")
+        elif guess.lower() == "quit":
+            zero += 1
         else:
             print("Try again. Wrong animal.")
 main()
