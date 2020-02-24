@@ -10,14 +10,22 @@ def getname():
     return first, last 
 
 def buildname(first, last):
-    return (first + "." + last)
+    fullname = first + "." + last
+    return (fullname.lower())
 
-def checkstrength(passwd):
+def getPass():
+    passwd= input("Create a new password:")
+    realstrength(passwd)
+    print("The force is strong with this one...")
+    return passwd
+
+def realstrength(passwd):
     while len(passwd)<8:
         print("Fool of a Took! That password is feeble!")
         passwd = input("Create a new password: ")
-    print("The force is strong in this one…")
-    return passwd
+    while (passwd.isupper() or passwd.islower()):
+        print("Password not strong enough, use both upper and lower case.")
+        passwd = input("Create a new password.")
 
 def main():
     # get user's first and last names
@@ -26,9 +34,7 @@ def main():
     #GENERATE A MARIST-STYLE USERNAME
     uname = buildname(first,last)
 
-    passwd = input("Create a new password: ")
-
-    checkstrength(passwd)
+    getPass() 
 
     print("Account configured. Your new email address is", uname + "@marist.edu")
 main()
