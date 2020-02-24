@@ -1,7 +1,7 @@
 # CMPT 120 Intro to Programming
 # Lab #5 – Working with Strings and Functions
-# Author: Your Name Here
-# Created: YYYY-MM-DD
+# Author: Julianna Adler-Colvin
+# Created: 2020-02-24
 
 def main():
     # get user's first and last names
